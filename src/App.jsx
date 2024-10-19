@@ -1,12 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./pages/Layout/Layout";
   
-import Dashboard from "./pages/dashboard/dashboard";
-import Courses from "./pages/courses/courses";
-import Students from "./pages/students/students";
-import Teachers from "./pages/teachers/teachers";
-import Payments from "./pages/payments/payments";
-import Reports from "./pages/reports/reports";
+import Dashboard from "./pages/about/about";
+
+ 
+import Bromhot from "./pages/bromhot/bromhot";
+import About from "./pages/about/about";
+import Ticket from "./pages/ticket/ticket";
+import Travel from "./pages/travel/travel";
+import Signup from "./pages/signup/signup";
+import Home from "./pages/home/home";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -16,27 +19,27 @@ const App = () => {
       children: [
         {
           index: true,
-          element: <Dashboard />,
+          element: <Home />,
         },
         {
-          path: "courses",
-          element: <Courses />,
+          path: "bromhot",
+          element: <Bromhot />,
         },
         {
-          path: "students",
-          element: <Students />,
+          path: "about",
+          element: <About />,
         },
         {
-          path: "teachers",
-          element: <Teachers />,
+          path: "ticket",
+          element: <Ticket />,
         },
         {
-          path: "payments",
-          element: <Payments />,
+          path: "travel",
+          element: <Travel />,
         },
         {
-          path: "reports",
-          element: <Reports />,
+          path: "signup",
+          element: <Signup />,
         },
       ],
     },

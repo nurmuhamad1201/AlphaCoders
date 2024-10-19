@@ -1,45 +1,46 @@
- 
-import { AppBar, Toolbar, Typography, Button, IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Toolbar, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-
+import logo from '../assets/logo/tajiTravel2.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 const Header = () => {
   return (
-    <AppBar position="static" className="bg-blue-500">
-      <Toolbar>
-        {/* Menu Icon for Mobile */}
-        <IconButton edge="start" color="inherit" aria-label="menu" className="md:hidden">
-          <MenuIcon />
-        </IconButton>
+     
+      <Toolbar className='bg-[#232b38]'>
+        {/* Logo and Title */}
+        <Link to="/" className="flex items-center  space-x-2">
+          <img src={logo} alt="Tajik Travel Logo" className="h-10 w-10 rounded-full" />
+          <Typography variant="h6" component="div" className="font-sans text-white">
+            Tajik Travel
+          </Typography>
+        </Link>
 
-        {/* Logo or Brand Name */}
-        <Typography variant="h6" component="div" className="flex-1 font-bold text-white">
-          Education Center
-        </Typography>
-
-        {/* Links to Pages */}
-        <div className="hidden md:flex space-x-4">
+         
+        <div className="hidden md:flex space-x-4 ml-auto">
           <Button color="inherit">
-            <Link to="/" className="text-white hover:text-gray-200">Dashboard</Link>
+            <Link to="/bromhot" className="text-white hover:text-yellow-400">Brom Hotels</Link>
           </Button>
           <Button color="inherit">
-            <Link to="/courses" className="text-white hover:text-gray-200">Courses</Link>
+            <Link to="/about" className="text-white hover:text-yellow-400">About Us</Link>
           </Button>
           <Button color="inherit">
-            <Link to="/students" className="text-white hover:text-gray-200">Students</Link>
+            <Link to="/ticket" className="text-white hover:text-yellow-400">Tickets</Link>
           </Button>
           <Button color="inherit">
-            <Link to="/teachers" className="text-white hover:text-gray-200">Teachers</Link>
+            <Link to="/travel" className="text-white hover:text-yellow-400">Travel</Link>
           </Button>
           <Button color="inherit">
-            <Link to="/payments" className="text-white hover:text-gray-200">Payments</Link>
+           Sign In
           </Button>
-          <Button color="inherit">
-            <Link to="/reports" className="text-white hover:text-gray-200">Reports</Link>
+          <Button color="inherit" className="flex items-center">
+            <Link to="/signup" className="flex items-center text-white hover:text-yellow-400">
+              <FontAwesomeIcon icon={faUser} className="mr-1" />
+              Sign Up
+            </Link>
           </Button>
         </div>
       </Toolbar>
-    </AppBar>
+  
   );
 };
 
