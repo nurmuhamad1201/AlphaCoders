@@ -1,12 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./pages/Layout/Layout";
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Services from "./pages/services/Services";
-import Process from "./pages/process/Process";
-import Testimonials from "./pages/testimonials/Testimonials";
-import Contact from "./pages/contact/Contact";
-import Reviews from "./pages/review/Review";
+  
+import Dashboard from "./pages/dashboard/dashboard";
+import Courses from "./pages/courses/courses";
+import Students from "./pages/students/students";
+import Teachers from "./pages/teachers/teachers";
+import Payments from "./pages/payments/payments";
+import Reports from "./pages/reports/reports";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -16,31 +16,27 @@ const App = () => {
       children: [
         {
           index: true,
-          element: <Home />,
+          element: <Dashboard />,
         },
         {
-          path: "about",
-          element: <About />,
+          path: "courses",
+          element: <Courses />,
         },
         {
-          path: "services",
-          element: <Services />,
+          path: "students",
+          element: <Students />,
         },
         {
-          path: "process",
-          element: <Process />,
+          path: "teachers",
+          element: <Teachers />,
         },
         {
-          path: "testimonials",
-          element: <Testimonials />,
+          path: "payments",
+          element: <Payments />,
         },
         {
-          path: "contact",
-          element: <Contact />,
-        },
-        {
-          path: "review",
-          element: <Reviews />,
+          path: "reports",
+          element: <Reports />,
         },
       ],
     },
