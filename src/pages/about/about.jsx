@@ -7,6 +7,8 @@ import img4 from "../../assets/img/puerto.jpeg"
 import img5 from "../../assets/img/miami.jpeg"
 
 const About = () => {
+  console.log("hello");
+  
   return (
     <div>
 
