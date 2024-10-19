@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
+// eslint-disable-next-line react/prop-types
 const PassengerSelector = ({ onUpdateTotal }) => {
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
@@ -21,19 +22,19 @@ const PassengerSelector = ({ onUpdateTotal }) => {
     <div className="relative">
       <div
         onClick={toggleDropdown}
-        className="cursor-pointer px-4 py-2 border rounded bg-white dark:bg-gray-800 dark:text-white"
+        className="cursor-pointer px-4 py-2 border rounded bg-white text-black shadow-lg"
       >
         {`${adults + children + infants + students} Passenger${adults + children + infants + students > 1 ? 's' : ''}`}
-        <span className="ml-2 text-gray-500 dark:text-gray-400">ECO</span>
+        <span className="ml-2 text-black">ECO</span>
       </div>
 
       {isOpen && (
-        <div className="absolute mt-2 w-72 p-4 bg-white border rounded shadow-lg space-y-4 dark:bg-gray-900 dark:border-gray-700">
+        <div className="absolute mt-2 w-72 p-4 bg-white border rounded shadow-lg">
           {/* Adult Section */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mb-2">
             <div>
-              <p className="dark:text-white">Adult</p>
-              <span className="text-sm text-gray-500 dark:text-gray-400">12+ years</span>
+              <p className="text-black">Adult</p>
+              <span className="text-sm text-black">12+ years</span>
             </div>
             <div className="flex items-center">
               <button
@@ -41,17 +42,17 @@ const PassengerSelector = ({ onUpdateTotal }) => {
                   decrement(setAdults, adults);
                   updateTotal();
                 }}
-                className="px-2 py-1 bg-gray-200 rounded dark:bg-gray-700 dark:text-white"
+                className="px-2 py-1 bg-gray-200 text-black font-bold rounded"
               >
                 -
               </button>
-              <span className="px-4 dark:text-white">{adults}</span>
+              <span className="px-4 text-black">{adults}</span>
               <button
                 onClick={() => {
                   increment(setAdults, adults);
                   updateTotal();
                 }}
-                className="px-2 py-1 bg-gray-200 rounded dark:bg-gray-700 dark:text-white"
+                className="px-2 py-1 bg-gray-200 text-black font-bold rounded"
               >
                 +
               </button>
@@ -59,10 +60,10 @@ const PassengerSelector = ({ onUpdateTotal }) => {
           </div>
 
           {/* Child Section */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mb-2">
             <div>
-              <p className="dark:text-white">Child</p>
-              <span className="text-sm text-gray-500 dark:text-gray-400">2 - 12 years</span>
+              <p className="text-black">Child</p>
+              <span className="text-sm text-black">2 - 12 years</span>
             </div>
             <div className="flex items-center">
               <button
@@ -70,17 +71,17 @@ const PassengerSelector = ({ onUpdateTotal }) => {
                   decrement(setChildren, children);
                   updateTotal();
                 }}
-                className="px-2 py-1 bg-gray-200 rounded dark:bg-gray-700 dark:text-white"
+                className="px-2 py-1 bg-gray-200 text-black font-bold rounded"
               >
                 -
               </button>
-              <span className="px-4 dark:text-white">{children}</span>
+              <span className="px-4 text-black">{children}</span>
               <button
                 onClick={() => {
                   increment(setChildren, children);
                   updateTotal();
                 }}
-                className="px-2 py-1 bg-gray-200 rounded dark:bg-gray-700 dark:text-white"
+                className="px-2 py-1 bg-gray-200 text-black font-bold rounded"
               >
                 +
               </button>
@@ -88,10 +89,10 @@ const PassengerSelector = ({ onUpdateTotal }) => {
           </div>
 
           {/* Infant Section */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mb-2">
             <div>
-              <p className="dark:text-white">Infant</p>
-              <span className="text-sm text-gray-500 dark:text-gray-400">Under 2 years</span>
+              <p className="text-black">Infant</p>
+              <span className="text-sm text-black">Under 2 years</span>
             </div>
             <div className="flex items-center">
               <button
@@ -99,17 +100,17 @@ const PassengerSelector = ({ onUpdateTotal }) => {
                   decrement(setInfants, infants);
                   updateTotal();
                 }}
-                className="px-2 py-1 bg-gray-200 rounded dark:bg-gray-700 dark:text-white"
+                className="px-2 py-1 bg-gray-200 text-black font-bold rounded"
               >
                 -
               </button>
-              <span className="px-4 dark:text-white">{infants}</span>
+              <span className="px-4 text-black">{infants}</span>
               <button
                 onClick={() => {
                   increment(setInfants, infants);
                   updateTotal();
                 }}
-                className="px-2 py-1 bg-gray-200 rounded dark:bg-gray-700 dark:text-white"
+                className="px-2 py-1 bg-gray-200 text-black font-bold rounded"
               >
                 +
               </button>
@@ -117,10 +118,10 @@ const PassengerSelector = ({ onUpdateTotal }) => {
           </div>
 
           {/* Student Section */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mb-2">
             <div>
-              <p className="dark:text-white">Student</p>
-              <span className="text-sm text-gray-500 dark:text-gray-400">12 - 35 years</span>
+              <p className="text-black">Student</p>
+              <span className="text-sm text-black">12+ years</span>
             </div>
             <div className="flex items-center">
               <button
@@ -128,17 +129,17 @@ const PassengerSelector = ({ onUpdateTotal }) => {
                   decrement(setStudents, students);
                   updateTotal();
                 }}
-                className="px-2 py-1 bg-gray-200 rounded dark:bg-gray-700 dark:text-white"
+                className="px-2 py-1 bg-gray-200 text-black font-bold rounded"
               >
                 -
               </button>
-              <span className="px-4 dark:text-white">{students}</span>
+              <span className="px-4 text-black">{students}</span>
               <button
                 onClick={() => {
                   increment(setStudents, students);
                   updateTotal();
                 }}
-                className="px-2 py-1 bg-gray-200 rounded dark:bg-gray-700 dark:text-white"
+                className="px-2 py-1 bg-gray-200 text-black font-bold rounded"
               >
                 +
               </button>
