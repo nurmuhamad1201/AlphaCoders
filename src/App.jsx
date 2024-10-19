@@ -1,8 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./pages/Layout/Layout";
   
-import Dashboard from "./pages/about/about";
-
+ 
  
 import Bromhot from "./pages/bromhot/bromhot";
 import About from "./pages/about/about";
