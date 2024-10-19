@@ -1,10 +1,12 @@
 import React from 'react'
+
 import img from "../../assets/img/photo_2024-10-19 16.33.32.jpeg"
 import img1 from "../../assets/img/canun.jpg"
 import img2 from "../../assets/img/orlando.jpeg"
 import img3 from "../../assets/img/los_angeles.jpeg"
 import img4 from "../../assets/img/puerto.jpeg"
 import img5 from "../../assets/img/miami.jpeg"
+
 
 const About = () => {
   console.log("hello");
