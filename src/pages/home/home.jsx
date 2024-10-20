@@ -69,19 +69,33 @@ const Home = () => {
   };
 
   const handleCreateFlight = () => {
+    // Find the selected city object using the selected city name
+    const selectedCityData = cityData.find(city => city.city === selectedCity);
+  
     // Save data to localStorage
     const flightData = {
       currentLocation,
-      selectedCity,
-      selectedDate,
-      totalPassengers,
+      city: selectedCity,
+      time: selectedDate,
+      totalPerson: totalPassengers,
+      imageCity: selectedCityData ? selectedCityData.imageCity : '', // Get image URL using selected city data
+      priceticket: selectedCityData ? selectedCityData.priceticket : '', // Save the ticket price
+      id: selectedCityData ? selectedCityData.id : '', // Save the city ID
     };
-    localStorage.setItem('flightData', JSON.stringify(flightData));
-
+  
+    // Get existing flights from localStorage
+    const existingFlights = JSON.parse(localStorage.getItem('flightData')) || [];
+  
+    // Add the new flight to the existing flights
+    existingFlights.push(flightData);
+    
+    // Save the updated flights array back to localStorage
+    localStorage.setItem('flightData', JSON.stringify(existingFlights));
+  
     // Redirect to another page (for example, to "/confirmation")
     window.location.href = '/confirmation';
   };
-
+  
   return (
     <div>
       <div className="relative h-[400px]">
