@@ -115,7 +115,7 @@ const About = () => {
 
 
 <div className='flex px-[30px] py-[30px]'> 
-<div className='flex w-[1050px] flex-wrap gap-[10px]'>
+<div className='flex w-[1050px] flex-wrap '>
 
 
 <div>
@@ -155,8 +155,8 @@ const About = () => {
 </div>
 
 <div>
-  <img className='w-[500px] h-[700px]' src={img5} alt="" />
-  <div className='absolute mt-[-400px] ml-[200px] text-[center] text-[white]'>
+  <img className='w-[600px] h-[700px] ml-[-50px]' src={img5} alt="" />
+  <div className='absolute mt-[-400px] ml-[150px] text-[center] text-[white]'>
     <h1 className='text-[40px]'>Miami</h1>
     <p>South Beach</p>
   </div>
@@ -268,7 +268,7 @@ const About = () => {
 
 <div className='flex justify-around'>
 
-<div className='w-[400px] ml-[20px] shadow-[0px_0px_30px_grey] mb-[50px]'>
+<div className='w-[400px] ml-[20px] shadow-[0px_0px_20px_grey] mb-[50px]'>
   <div className='bg-[blue] '>
     <h1 className='text-[40px] text-center text-[white]'>Usa Hotels</h1>
   </div>
@@ -353,7 +353,7 @@ const About = () => {
   </div>
 </div>
 
-<div className='w-[400px] ml-[20px] shadow-[0px_0px_30px_grey] mb-[50px]'>
+<div className='w-[400px] ml-[20px] shadow-[0px_0px_20px_grey] mb-[50px]'>
   <div className='bg-[blue] '>
     <h1 className='text-[40px] text-center text-[white]'>Canada Hotels</h1>
   </div>
@@ -438,7 +438,7 @@ const About = () => {
   </div>
 </div>
 
-<div className='w-[400px] ml-[20px] shadow-[0px_0px_30px_grey] mb-[50px]'>
+<div className='w-[400px] ml-[20px] shadow-[0px_0px_20px_grey] mb-[50px]'>
   <div className='bg-[blue] '>
     <h1 className='text-[40px] text-center text-[white]'>Mexica Hotels</h1>
   </div>
