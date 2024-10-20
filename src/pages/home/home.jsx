@@ -4,6 +4,10 @@ import istiqlol from '../../assets/img/istiqlol.jpg';
 import { Getdata } from '../../api/apiService';
 import PassengerSelector from '../../api/PassengerSelector.jsx';
 import { Button, Select, MenuItem, InputLabel, FormControl, TextField, Box } from '@mui/material';
+import 'tailwindcss/tailwind.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChair, faSuitcaseRolling, faHotel, faCar, faShieldAlt, faGift } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [cityData, setCityData] = useState([]);
@@ -107,7 +111,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="   w-full p-8 bg-white shadow-lg">
+      <div className="  w-full p-8 bg-white shadow-lg">
         <Box width='80%' margin="auto" display="flex" alignItems="center" gap={2}>
           <FormControl fullWidth>
             <InputLabel>Current Location</InputLabel>
@@ -166,30 +170,33 @@ const Home = () => {
       </div>
 
       <div className="p-4">
-      {/* Grid for Travel Services */}
+       
       <div className="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-4 mb-8">
-        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
-          <i className="fas fa-chair text-4xl mb-2"></i>
+      <Link to='Seat'>
+      <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+          <FontAwesomeIcon icon={faChair} className="text-4xl mb-2" />
           <span>Seat selection</span>
-        </button>
+        </button></Link>
+        <Link to='baggage'>
         <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
-          <i className="fas fa-suitcase-rolling text-4xl mb-2"></i>
+          <FontAwesomeIcon icon={faSuitcaseRolling} className="text-4xl mb-2" />
           <span>Extra baggage</span>
-        </button>
+        </button></Link>
+       
         <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
-          <i className="fas fa-hotel text-4xl mb-2"></i>
+          <FontAwesomeIcon icon={faHotel} className="text-4xl mb-2" />
           <span>Book a hotel</span>
         </button>
         <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
-          <i className="fas fa-car text-4xl mb-2"></i>
+          <FontAwesomeIcon icon={faCar} className="text-4xl mb-2" />
           <span>Rent a car</span>
         </button>
         <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
-          <i className="fas fa-shield-alt text-4xl mb-2"></i>
+          <FontAwesomeIcon icon={faShieldAlt} className="text-4xl mb-2" />
           <span>Travel insurance</span>
         </button>
         <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
-          <i className="fas fa-gift text-4xl mb-2"></i>
+          <FontAwesomeIcon icon={faGift} className="text-4xl mb-2" />
           <span>Gift Card</span>
         </button>
       </div>
