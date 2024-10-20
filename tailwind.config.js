@@ -7,12 +7,21 @@ export default {
   theme: {
     extend: {
       screens: {
-        'sm': '450px',   
-        'md': '768px',   
-        'lg': '1024px',  
-        'xl': '1280px',    
-        '2xl': '1536px',
-      }
+        '2xl': {'max': '1500px'},
+        // => @media (max-width: 1535px) { ... }
+  
+        'xl': {'max': '950px'},
+        // => @media (max-width: 1279px) { ... }
+  
+        'lg': {'max': '765px'},
+        // => @media (max-width: 1023px) { ... }
+  
+        'md': {'max': '420px'},
+        // => @media (max-width: 767px) { ... }
+  
+        'xs': {'max': '390px'},
+        
+      },
     },
   },
   plugins: [],

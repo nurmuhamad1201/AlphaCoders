@@ -204,11 +204,11 @@ const Home = () => {
       </div>
 
       {/* Grid for Destination Info */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-1 grid-cols-2 gap-8">
         <div className="border p-4 rounded-lg">
           <h2 className="text-xl font-bold mb-4">Our second destination in Australia: Sydney</h2>
           <img
-            src="https://placehold.co/600x400"
+            src="https://www.turkishairlines.com/_next/image?url=https%3A%2F%2Fcdn.turkishairlines.com%2Fm%2F365ec2e6da06a3cd%2Foriginal%2Fsydney_500x250.jpg&w=640&q=75"
             alt="Aerial view of Sydney Opera House and Sydney Harbour Bridge"
             className="w-full mb-4 rounded-lg"
           />
@@ -222,7 +222,7 @@ const Home = () => {
         <div className="border p-4 rounded-lg">
           <h2 className="text-xl font-bold mb-4">Touristanbul: An amazing experience!</h2>
           <img
-            src="https://placehold.co/600x400"
+            src="https://www.turkishairlines.com/_next/image?url=https%3A%2F%2Fcdn.turkishairlines.com%2Fm%2F16a1746c7150923a%2Foriginal%2Ftouristanbul.jpg&w=640&q=75"
             alt="Aerial view of Bosphorus Bridge in Istanbul"
             className="w-full mb-4 rounded-lg"
           />
