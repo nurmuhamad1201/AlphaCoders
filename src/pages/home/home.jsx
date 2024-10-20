@@ -86,20 +86,20 @@ const Home = () => {
       id: selectedCityData ? selectedCityData.id : '',  
     };
   
-    // Retrieve existing flights from localStorage
+   
     let existingFlights = JSON.parse(localStorage.getItem('flightData'));
   
-    // Check if existingFlights is an array, if not, initialize it as an empty array
+    
     if (!Array.isArray(existingFlights)) {
       existingFlights = [];
     }
     
     existingFlights.push(flightData);
   
-    // Save the updated flights array back to localStorage
+   
     localStorage.setItem('flightData', JSON.stringify(existingFlights));
   
-    // Redirect to another page (for example, to "/confirmation")
+   
     window.location.href = '/confirmation';
   };
   

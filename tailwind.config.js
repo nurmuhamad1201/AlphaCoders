@@ -14,10 +14,10 @@ export default {
         // => @media (max-width: 1279px) { ... }
   
         'lg': {'max': '765px'},
-        // => @media (max-width: 1023px) { ... }
+      
   
         'md': {'max': '420px'},
-        // => @media (max-width: 767px) { ... }
+       
   
         'xs': {'max': '390px'},
         
