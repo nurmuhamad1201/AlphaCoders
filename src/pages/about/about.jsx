@@ -76,7 +76,7 @@ const About = () => {
 <div>
 <div className='flex border-[1px] borde-[solid] border-[black] rounded-[5px] mb-[20px]'>
   <div> 
-   <img src="//c.fareportal.com/gcms/portals/2/images/destinations/BER-rx.jpg" class="lazy" width="100%" height="100%" /></div>
+   <img className='w-[300px]' src="//c.fareportal.com/gcms/portals/2/images/destinations/BER-rx.jpg" class="lazy" width="100%" height="100%" /></div>
  <div>
 
   <div className='ml-[40px]'>
