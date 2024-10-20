@@ -8,6 +8,7 @@ import 'tailwindcss/tailwind.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChair, faSuitcaseRolling, faHotel, faCar, faShieldAlt, faGift } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { Swiperss } from '../../components/swiper.jsx';
 
 const Home = () => {
   const [cityData, setCityData] = useState([]);
@@ -234,6 +235,10 @@ const Home = () => {
         </div>
       </div>
     </div>
+
+<Swiperss />
+
+
     </div>
   );
 };

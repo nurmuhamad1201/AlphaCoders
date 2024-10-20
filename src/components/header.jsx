@@ -16,10 +16,10 @@ const Header = () => {
         </Link>
 
          
-        <div className="hidden md:flex space-x-4 ml-auto">
+        <div className="md:hidden flex space-x-4 ml-auto">
           <Button color="inherit">
             <Link to="/bromhot" className="text-white hover:text-yellow-400">Brom Hotels</Link>
-          </Button>
+          </Button>   
           <Button color="inherit">
             <Link to="/about" className="text-white hover:text-yellow-400">About Us</Link>
           </Button>
