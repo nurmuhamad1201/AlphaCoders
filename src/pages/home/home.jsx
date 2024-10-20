@@ -216,7 +216,7 @@ const Home = () => {
             Tickets to Sydney are now available! Our first flight to this vibrant port city in Australia is on November
             28. Purchase tickets now and fly to Sydney, where contemporary design is showcased amid stunning landscapes.
           </p>
-          <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Discover</button>
+       <Link to='https://www.australia.com/en'><button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Discover</button></Link>   
         </div>
 
         <div className="border p-4 rounded-lg">
@@ -230,7 +230,7 @@ const Home = () => {
             You can benefit from our complimentary Touristanbul service to make memories which is offered to our
             passengers who have a connecting international flight in Istanbul with a layover between 6-24 hours.
           </p>
-          <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Discover</button>
+         <Link to='https://istanbul-international-airport.com/'><button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Discover</button></Link> 
         </div>
       </div>
     </div>
