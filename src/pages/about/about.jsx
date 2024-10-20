@@ -525,6 +525,9 @@ const About = () => {
 
 </div>
 
+<div>
+  <h1>salom</h1>
+</div>
 
 
     </div>
