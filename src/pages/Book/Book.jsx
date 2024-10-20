@@ -45,11 +45,6 @@ const Book = () => {
     }
   }, []);
 
-  // Save total passengers to local storage whenever it changes
-  useEffect(() => {
-    localStorage.setItem('totalPassengers', totalPassengers);
-  }, [totalPassengers]);
-
   const saveBooking = () => {
     if (!selectedHotel) {
       setModalTitle('Error');
@@ -57,7 +52,7 @@ const Book = () => {
       setOpenModal(true);
       return;
     }
-
+  
     const bookingData = {
       hotelName: selectedHotel.hotelName,
       priceHotel: selectedHotel.priceHotel,
@@ -67,19 +62,32 @@ const Book = () => {
       hotelCity: selectedHotel.hotelCity,
       id: selectedHotel.id,
     };
-
+  
     // Save to local storage
-    localStorage.setItem('hotelBooking', JSON.stringify(bookingData));
-
+    const existingBookings = JSON.parse(localStorage.getItem('hotelBookings')) || [];
+    existingBookings.push(bookingData);
+    localStorage.setItem('hotelBookings', JSON.stringify(existingBookings));
+  
+    // Retrieve the current total passengers from local storage
+    const storedTotal = localStorage.getItem('totalPassengers');
+    const currentTotal = storedTotal ? Number(storedTotal) : 0;
+  
+    // Add the new passengers to the current total
+    const newTotalPassengers = currentTotal + totalPassengers;
+  
+    // Update local storage with the new total
+    localStorage.setItem('totalPassengers', newTotalPassengers);
+  
     setModalTitle('Booking Saved');
-    setModalMessage('Your request for get Hotel Send!');
+    setModalMessage('Your request for the hotel has been sent!');
     setOpenModal(true);
   };
-
+  
   // Function to handle modal close
   const handleCloseModal = () => {
     setOpenModal(false);
   };
+  
 
   return (
     <div className="relative">
@@ -88,7 +96,6 @@ const Book = () => {
         alt="Aerial view of a resort with pools and lounge areas"
         className="w-full h-96 object-cover"
       />
-           
 
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <h1 className="text-4xl font-bold">
@@ -96,7 +103,7 @@ const Book = () => {
         </h1>
       </div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 bg-white shadow-lg rounded-lg p-6">
-      <Link to='/BookingConfirmation'> <Button className="    px-6 py-2 rounded flex items-center">
+        <Link to='/BookingConfirmation'> <Button className="px-6 py-2 rounded flex items-center">
           <FontAwesomeIcon icon={faTicketAlt} className="mr-2" />
           See tickets
         </Button></Link>
@@ -160,47 +167,27 @@ const Book = () => {
 
           {/* Save Button */}
           <div className="flex items-end">
-            <button
-              onClick={saveBooking}
-              className="bg-red-600 text-white px-6 py-2 rounded flex items-center"
-            >
-              Save Booking <i className="fas fa-save ml-2"></i>
-            </button>
+          <Button onClick={saveBooking} className="bg-blue-500 text-white px-4 py-2 rounded">
+          Save Booking
+          </Button>
+
           </div>
         </div>
       </div>
 
       <div className="mt-20 text-center px-4">
         <p className="text-gray-700 text-lg">
-          When planning trips, holidays, and vacations, enjoy the benefits of booking your accommodation with a Turkish Airlines contracted partner. Reserve your hotel through Booking.com or Jolly and earn 2 Miles for every 1 EUR spent.
+          When booking hotels, you can enjoy all the amenities and leisure
+          options, along with great customer service!
         </p>
-        <h2 className="mt-10 text-2xl font-bold">
-          Accommodation advantages with Booking.com and Jolly
-        </h2>
       </div>
 
-      {/* Modal for Confirmation/Error Messages */}
+      {/* Modal for Booking Confirmation/Error */}
       <Modal open={openModal} onClose={handleCloseModal}>
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 400,
-            bgcolor: 'background.paper',
-            boxShadow: 24,
-            p: 4,
-            borderRadius: 2,
-          }}
-        >
-          <Typography variant="h6" component="h2" gutterBottom>
-            {modalTitle}
-          </Typography>
-          <Typography variant="body2">
-            {modalMessage}
-          </Typography>
-          <Button onClick={handleCloseModal} color="primary" variant="contained" sx={{ mt: 2 }}>
+        <Box className="bg-white p-4 rounded">
+          <Typography variant="h6">{modalTitle}</Typography>
+          <Typography>{modalMessage}</Typography>
+          <Button onClick={handleCloseModal} className="mt-4">
             Close
           </Button>
         </Box>
