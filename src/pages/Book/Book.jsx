@@ -9,7 +9,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTicketAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-
+import img from "../../assets/img/Jolly1.avif"
+import PhotoAndText from "../../components/PhotoAndText";
+import usa from '../../assets/img/usa_hotels.jpg'
+import hayat from '../../assets/img/Lasvegas.jpeg'
 const Book = () => {
   const [hotels, setHotels] = useState([]); // State to store hotel data
   const [totalPassengers, setTotalPassengers] = useState(1);
@@ -90,12 +93,9 @@ const Book = () => {
   
 
   return (
-    <div className="relative">
-      <img
-        src="https://placehold.co/1920x1080"
-        alt="Aerial view of a resort with pools and lounge areas"
-        className="w-full h-96 object-cover"
-      />
+   <div>
+     <div className="relative">
+      <img className="w-full" src={img} alt="" />
 
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <h1 className="text-4xl font-bold">
@@ -192,7 +192,11 @@ const Book = () => {
           </Button>
         </Box>
       </Modal>
+
     </div>
+      <PhotoAndText image={usa} />
+      <PhotoAndText image={usa} />
+   </div>
   );
 };
 

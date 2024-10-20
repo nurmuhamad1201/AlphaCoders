@@ -12,7 +12,7 @@ import img5 from "../../assets/img/miami.jpeg"
 import img6 from "../../assets/img/Lasvegas.jpeg"
 import img7 from "../../assets/img/Hotels.jpg"
 import img8 from "../../assets/img/Boston.jpeg"
-import img9 from "../../assets/img/usa hotels.jpg"
+import img9 from "../../assets/img/usa_hotels.jpg"
 import img10 from "../../assets/img/canada.jpg"
 import img11 from "../../assets/img/mexica.jpg"
 
