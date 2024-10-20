@@ -172,33 +172,35 @@ const Home = () => {
       <div className="p-4">
        
       <div className="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-4 mb-8">
-      <Link to='Seat'>
-      <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+        <Link to="/Seat" className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
           <FontAwesomeIcon icon={faChair} className="text-4xl mb-2" />
           <span>Seat selection</span>
-        </button></Link>
-        <Link to='baggage'>
-        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+        </Link>
+        
+        <Link to="/baggage" className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
           <FontAwesomeIcon icon={faSuitcaseRolling} className="text-4xl mb-2" />
           <span>Extra baggage</span>
-        </button></Link>
-       
-        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+        </Link>
+
+        <Link to="/Book" className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
           <FontAwesomeIcon icon={faHotel} className="text-4xl mb-2" />
           <span>Book a hotel</span>
-        </button>
-        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+        </Link>
+        
+        <Link to="/Car" className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
           <FontAwesomeIcon icon={faCar} className="text-4xl mb-2" />
           <span>Rent a car</span>
-        </button>
-        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+        </Link>
+        
+        <Link to="/insurance" className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
           <FontAwesomeIcon icon={faShieldAlt} className="text-4xl mb-2" />
           <span>Travel insurance</span>
-        </button>
-        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+        </Link>
+        
+        <Link to="/gift" className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
           <FontAwesomeIcon icon={faGift} className="text-4xl mb-2" />
           <span>Gift Card</span>
-        </button>
+        </Link>
       </div>
 
       {/* Grid for Destination Info */}
