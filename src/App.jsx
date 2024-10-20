@@ -16,6 +16,7 @@ import Book from "./pages/Book/Book";
 import Car from "./pages/Car/Car";
 import Insurance from "./pages/insurance/insurance";
 import Gift from "./pages/gift/gift";
+import BookingConfirmation from "./components/BookingConfirmation";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -74,6 +75,10 @@ const App = () => {
         {
           path: "gift",
           element: <Gift />,
+        },
+        {
+          path: "BookingConfirmation",
+          element: <BookingConfirmation />,
         },
       ],
     },

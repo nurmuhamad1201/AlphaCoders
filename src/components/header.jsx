@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo/tajiTravel2.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import textLogo from '../assets/logo/tajiktravel_logo.png'
 const Header = () => {
   return (
      
-      <Toolbar className='bg-[#232b38]'>
+      <Toolbar className='bg-[#000000]'>
         {/* Logo and Title */}
         <Link to="/" className="flex items-center  space-x-2">
-          <img src={logo} alt="Tajik Travel Logo" className="h-10 w-10 rounded-full" />
+          {/* <img src={logo} alt="Tajik Travel Logo" className="h-10 w-10 rounded-full" /> */}
           <Typography variant="h6" component="div" className="font-sans text-white">
-            Tajik Travel
+            <img src={textLogo} alt="logo" className='w-48' />
           </Typography>
         </Link>
 
