@@ -8,7 +8,7 @@ const Confirmation = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Load flight data from localStorage
+   
     const data = JSON.parse(localStorage.getItem('flightData')) || [];
     setFlights(data);
   }, []);
@@ -16,11 +16,11 @@ const Confirmation = () => {
   const handleDelete = (indexToRemove) => {
     setLoading(true);
 
-    // Simulate a 2-second delay before deleting
+    
     setTimeout(() => {
       const updatedFlights = flights.filter((_, index) => index !== indexToRemove);
       setFlights(updatedFlights);
-      // Update localStorage
+      
       localStorage.setItem('flightData', JSON.stringify(updatedFlights));
       setLoading(false);
     }, 2000);

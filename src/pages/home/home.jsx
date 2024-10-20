@@ -197,7 +197,7 @@ const Home = () => {
           <span>Rent a car</span>
         </Link>
         
-        <Link to="/insurance" className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+        <Link to="/Seat" className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
           <FontAwesomeIcon icon={faShieldAlt} className="text-4xl mb-2" />
           <span>Travel insurance</span>
         </Link>

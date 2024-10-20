@@ -1,5 +1,5 @@
 import { Button, CircularProgress } from '@mui/material';
-import { House } from '@mui/icons-material'; // Import only the House icon
+import { House } from '@mui/icons-material'; 
 import { useState } from 'react';
 
 const BookingConfirmation = () => {
@@ -15,17 +15,17 @@ const BookingConfirmation = () => {
     setIsDeleting(true);
     setTimeout(() => {
       const updatedBookings = [...bookingData];
-      updatedBookings.splice(index, 1); // Remove the booking at the specified index
-      localStorage.setItem('hotelBookings', JSON.stringify(updatedBookings)); // Update local storage
-      setBookingData(updatedBookings); // Update state
+      updatedBookings.splice(index, 1); 
+      localStorage.setItem('hotelBookings', JSON.stringify(updatedBookings)); 
+      setBookingData(updatedBookings); 
 
-      // Update total passengers
-      const updatedTotalPassengers = Math.max(0, totalPassengers - 1); // Decrease total passengers by 1
-      localStorage.setItem('totalPassengers', updatedTotalPassengers); // Update local storage
-      setTotalPassengers(updatedTotalPassengers); // Update state
+       
+      const updatedTotalPassengers = Math.max(0, totalPassengers - 1); 
+      localStorage.setItem('totalPassengers', updatedTotalPassengers); 
+      setTotalPassengers(updatedTotalPassengers); 
 
       setIsDeleting(false);
-    }, 1000); // Simulate loading delay
+    }, 1000); 
   };
 
   if (bookingData.length === 0) {
@@ -69,7 +69,7 @@ const BookingConfirmation = () => {
       </div>
 
       <Button
-        onClick={() => deleteBookings()} // Optionally delete all bookings
+        onClick={() => deleteBookings()}  
         disabled={isDeleting}
         className={`mt-6 w-full py-2 rounded-lg transition-colors ${isDeleting ? 'bg-red-400' : 'bg-red-600 hover:bg-red-700'} text-white`}
       >

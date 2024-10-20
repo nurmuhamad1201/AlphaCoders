@@ -25,9 +25,9 @@ const Header = () => {
           <Button color="inherit">
             <Link to="/confirmation" className="text-white hover:text-yellow-400">Tickets</Link>
           </Button>
-          <Button color="inherit">
-            <Link to="/Car" className="text-white hover:text-yellow-400">Rent A Car
-            <FontAwesomeIcon icon={faCar} className="mr-1" /></Link>
+          <Button  color="inherit">
+            <Link to="/Car" className="text-white mr-3 hover:text-yellow-400">Rent A Car
+            <FontAwesomeIcon icon={faCar} className="ml-3" /></Link>
           </Button>
           {/* <Button color="inherit">
            Sign In
