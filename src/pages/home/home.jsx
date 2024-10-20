@@ -74,9 +74,7 @@ const Home = () => {
   };
 
   const handleCreateFlight = () => {
-    // Find the selected city object using the selected city name
     const selectedCityData = cityData.find(city => city.city === selectedCity);
-  
     
     const flightData = {
       currentLocation,
@@ -88,18 +86,23 @@ const Home = () => {
       id: selectedCityData ? selectedCityData.id : '',  
     };
   
-     
-    const existingFlights = JSON.parse(localStorage.getItem('flightData')) || [];
+    // Retrieve existing flights from localStorage
+    let existingFlights = JSON.parse(localStorage.getItem('flightData'));
   
+    // Check if existingFlights is an array, if not, initialize it as an empty array
+    if (!Array.isArray(existingFlights)) {
+      existingFlights = [];
+    }
     
     existingFlights.push(flightData);
-    
+  
     // Save the updated flights array back to localStorage
     localStorage.setItem('flightData', JSON.stringify(existingFlights));
   
     // Redirect to another page (for example, to "/confirmation")
     window.location.href = '/confirmation';
   };
+  
   
   return (
     <div>
