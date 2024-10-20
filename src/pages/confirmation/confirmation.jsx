@@ -10,7 +10,7 @@ const Confirmation = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center p-4 bg-gray-100 min-h-screen">
+    <div className=" grid grid-cols-1 items-center p-4 bg-gray-100  ">
       {flights.length > 0 ? (
         flights.map((flight, index) => (
           <div key={index} className="bg-white border border-gray-300 rounded-lg p-6 mb-4 shadow-lg w-full max-w-md">
@@ -19,16 +19,8 @@ const Confirmation = () => {
             <p className="text-gray-800"><strong>Time:</strong> {new Date(flight.time).toLocaleString()}</p>
             <p className="text-gray-800"><strong>Total Passengers:</strong> {flight.totalPerson}</p>
             <p className="text-gray-800"><strong>Price per Ticket:</strong> ${flight.priceticket}</p>
-            {/* Display the city image from flight data */}
-            {flight.imageCity ? (
-              <img 
-                src={flight.imageCity} 
-                alt={flight.city} 
-                className="w-full h-auto rounded-md mt-2" 
-              />
-            ) : (
-              <p className="text-gray-800">No image available for this city.</p>
-            )}
+            
+            
           </div>
         ))
       ) : (

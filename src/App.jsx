@@ -10,6 +10,8 @@ import Travel from "./pages/travel/travel";
 import Signup from "./pages/signup/signup";
 import Home from "./pages/home/home";
 import Confirmation from "./pages/confirmation/confirmation";
+import Seat from "./pages/Seat/Seat";
+import Baggage from "./pages/baggage/baggage";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -44,6 +46,14 @@ const App = () => {
         {
           path: "confirmation",
           element: <Confirmation />,
+        },
+        {
+          path: "Seat",
+          element: <Seat />,
+        },
+        {
+          path: "baggage",
+          element: <Baggage />,
         },
       ],
     },

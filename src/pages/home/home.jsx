@@ -72,21 +72,21 @@ const Home = () => {
     // Find the selected city object using the selected city name
     const selectedCityData = cityData.find(city => city.city === selectedCity);
   
-    // Save data to localStorage
+    
     const flightData = {
       currentLocation,
       city: selectedCity,
       time: selectedDate,
       totalPerson: totalPassengers,
-      imageCity: selectedCityData ? selectedCityData.imageCity : '', // Get image URL using selected city data
-      priceticket: selectedCityData ? selectedCityData.priceticket : '', // Save the ticket price
-      id: selectedCityData ? selectedCityData.id : '', // Save the city ID
+      imageCity: selectedCityData ? selectedCityData.imageCity : '',
+      priceticket: selectedCityData ? selectedCityData.priceticket : '',  
+      id: selectedCityData ? selectedCityData.id : '',  
     };
   
-    // Get existing flights from localStorage
+     
     const existingFlights = JSON.parse(localStorage.getItem('flightData')) || [];
   
-    // Add the new flight to the existing flights
+    
     existingFlights.push(flightData);
     
     // Save the updated flights array back to localStorage
@@ -107,7 +107,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full p-8 bg-white shadow-lg">
+      <div className="   w-full p-8 bg-white shadow-lg">
         <Box width='80%' margin="auto" display="flex" alignItems="center" gap={2}>
           <FormControl fullWidth>
             <InputLabel>Current Location</InputLabel>
@@ -164,6 +164,67 @@ const Home = () => {
           </Button>
         </Box>
       </div>
+
+      <div className="p-4">
+      {/* Grid for Travel Services */}
+      <div className="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-4 mb-8">
+        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+          <i className="fas fa-chair text-4xl mb-2"></i>
+          <span>Seat selection</span>
+        </button>
+        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+          <i className="fas fa-suitcase-rolling text-4xl mb-2"></i>
+          <span>Extra baggage</span>
+        </button>
+        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+          <i className="fas fa-hotel text-4xl mb-2"></i>
+          <span>Book a hotel</span>
+        </button>
+        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+          <i className="fas fa-car text-4xl mb-2"></i>
+          <span>Rent a car</span>
+        </button>
+        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+          <i className="fas fa-shield-alt text-4xl mb-2"></i>
+          <span>Travel insurance</span>
+        </button>
+        <button className="flex flex-col items-center p-4 border rounded-lg hover:bg-red-500 hover:text-white">
+          <i className="fas fa-gift text-4xl mb-2"></i>
+          <span>Gift Card</span>
+        </button>
+      </div>
+
+      {/* Grid for Destination Info */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="border p-4 rounded-lg">
+          <h2 className="text-xl font-bold mb-4">Our second destination in Australia: Sydney</h2>
+          <img
+            src="https://placehold.co/600x400"
+            alt="Aerial view of Sydney Opera House and Sydney Harbour Bridge"
+            className="w-full mb-4 rounded-lg"
+          />
+          <p className="mb-4">
+            Tickets to Sydney are now available! Our first flight to this vibrant port city in Australia is on November
+            28. Purchase tickets now and fly to Sydney, where contemporary design is showcased amid stunning landscapes.
+          </p>
+          <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Discover</button>
+        </div>
+
+        <div className="border p-4 rounded-lg">
+          <h2 className="text-xl font-bold mb-4">Touristanbul: An amazing experience!</h2>
+          <img
+            src="https://placehold.co/600x400"
+            alt="Aerial view of Bosphorus Bridge in Istanbul"
+            className="w-full mb-4 rounded-lg"
+          />
+          <p className="mb-4">
+            You can benefit from our complimentary Touristanbul service to make memories which is offered to our
+            passengers who have a connecting international flight in Istanbul with a layover between 6-24 hours.
+          </p>
+          <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Discover</button>
+        </div>
+      </div>
+    </div>
     </div>
   );
 };
